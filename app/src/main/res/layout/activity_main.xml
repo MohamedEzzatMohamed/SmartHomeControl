@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@android:color/background_light"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="12dp"
+        android:background="@color/parts"
+        >
+
+        <Switch
+            android:id="@+id/switch_door"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="18dp"
+            android:text="@string/door"
+            android:textSize="22sp"
+            android:textColor="@android:color/background_dark"
+            android:theme="@style/SCBSwitch"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.97"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <Switch
+            android:id="@+id/switch_security"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="18dp"
+            android:text="@string/security"
+            android:textSize="22sp"
+            android:theme="@style/SCBSwitch"
+            android:textColor="@android:color/background_dark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.97"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switch_door" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_height="0dp"
+        android:padding="8dp"
+        >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lights"
+            android:drawableEnd="@drawable/ic_idea"
+            android:gravity="start|center"
+            android:layout_marginTop="8dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textSize="22sp"
+            android:id="@+id/btn_lights"
+            android:onClick="setLights"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/curtains"
+            android:drawableEnd="@drawable/ic_curtain"
+            android:gravity="start|center"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:layout_marginTop="8dp"
+            android:textSize="22sp"
+            android:id="@+id/btn_curtains"
+            android:onClick="setCurtains"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pool"
+            android:drawableEnd="@drawable/ic_swimming_pool"
+            android:gravity="start|center"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:layout_marginTop="8dp"
+            android:textSize="22sp"
+            android:id="@+id/btn_pool"
+            android:onClick="setPool"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="18dp"
+        android:onClick="temperatureControl"
+        android:background="@color/parts"
+        >
+        <TextView
+            android:id="@+id/tv_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:textColor="@android:color/background_dark"
+            android:layout_marginTop="8dp"
+            android:text="@string/temperature"
+            android:textSize="22sp"/>
+        <TextView
+            android:id="@+id/tv_humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="7dp"
+            android:textColor="@android:color/background_dark"
+            android:text="@string/humidity"
+            android:textSize="22sp"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

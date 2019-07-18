@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SmartHomeControl</string>
+    <string name="door">Door</string>
+    <string name="lights">Lights</string>
+    <string name="pool">Pool</string>
+    <string name="security">Security system</string>
+    <string name="curtains">Curtains</string>
+    <string name="temperature">Temperature: \u0020</string>
+    <string name="humidity">Humidity: \u0020</string>
+</resources>
